@@ -1,0 +1,26 @@
+version: "3.1"
+
+stories:
+- story: Full marketing flow
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_marketing_help
+    - action: utter_greet
+    - intent: inform_sector
+      entities:
+        - sector: "hotel"
+    - action: utter_ask_budget
+    - intent: inform_budget
+      entities:
+        - budget: "10000"
+    - action: utter_ask_target
+    - intent: inform_target
+      entities:
+        - target_audience: "tourists"
+    - action: action_suggest_strategy
+    - action: utter_feedback_request
+    - intent: give_feedback
+      entities:
+        - feedback: "yes"
+    - action: action_store_feedback

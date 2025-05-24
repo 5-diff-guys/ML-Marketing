@@ -1,0 +1,53 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi there
+    - good morning
+
+- intent: goodbye
+  examples: |
+    - bye
+    - see you later
+    - thanks, that's all
+
+- intent: ask_marketing_help
+  examples: |
+    - I need help with marketing
+    - how to attract more customers?
+    - help me improve my business reach
+
+- intent: inform_sector
+  examples: |
+    - I run an IT company
+    - my sector is hotel
+    - we are product based
+    - it's a restaurant business
+    - I'm in the education sector
+
+- intent: inform_budget
+  examples: |
+    - around 10,000 rupees
+    - I can spend 5k monthly
+    - my budget is 50,000
+    - low budget
+    - high marketing budget
+
+- intent: inform_target
+  examples: |
+    - target audience is students
+    - corporate professionals
+    - mostly local families
+    - tourists
+    - B2B clients
+
+- intent: give_feedback
+  examples: |
+    - yes, it helped
+    - not really
+    - partially worked
+    - it worked well
+    - it was not useful

@@ -1,0 +1,28 @@
+version: "3.1"
+
+rules:
+- rule: Say goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: Ask sector
+  steps:
+    - intent: ask_marketing_help
+    - action: utter_greet
+
+- rule: Ask budget
+  steps:
+    - intent: inform_sector
+    - action: utter_ask_budget
+
+- rule: Ask target audience
+  steps:
+    - intent: inform_budget
+    - action: utter_ask_target
+
+- rule: Suggest marketing strategy
+  steps:
+    - intent: inform_target
+    - action: action_suggest_strategy
+    - action: utter_feedback_request

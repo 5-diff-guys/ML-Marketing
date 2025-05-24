@@ -1,0 +1,59 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - ask_marketing_help
+  - inform_sector
+  - inform_budget
+  - inform_target
+  - give_feedback
+
+entities:
+  - sector
+  - budget
+  - target_audience
+  - feedback
+
+slots:
+  sector:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: sector
+
+  budget:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: budget
+
+  target_audience:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: target_audience
+
+  feedback:
+    type: text
+    mappings:
+      - type: from_text
+responses:
+  utter_greet:
+    - text: "Hi there! I'm your marketing assistant. What sector is your business in?"
+
+  utter_ask_budget:
+    - text: "What is your estimated budget for marketing?"
+
+  utter_ask_target:
+    - text: "Who is your target audience?"
+
+  utter_goodbye:
+    - text: "Good luck with your marketing! I'm always here to help."
+
+  utter_feedback_request:
+    - text: "Did the suggested strategy help you?"
+
+actions:
+  - action_suggest_strategy
+  - action_store_feedback
